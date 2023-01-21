@@ -1,8 +1,8 @@
+import { questionsList } from "@/lib/utils/data";
 import Layout from "@/ui/layout";
 import { Chevron } from "@/ui/svg";
 import { Badge, SectionDescription, SectionTitle, Subtitle } from "@/ui/typography";
 import AnimationWrapper from "@/ui/wrapper/AnimationWrapper";
-import { questionsList } from "@/lib/utils/data";
 import { useState } from "react";
 import { twJoin, twMerge } from "tailwind-merge";
 
@@ -11,7 +11,6 @@ const Faq = () => {
 
   const handleClick = (id: number) => {
     if (clickId === id) return setClickId(0);
-
     setClickId(id);
   };
 
@@ -35,7 +34,7 @@ const Faq = () => {
               key={item.id}
               className={twMerge(
                 "flex w-full flex-col items-center justify-center rounded-md border-b-2",
-                clickId === item.id ? "bg-primary text-white" : ""
+                clickId === item.id ? "bg-primary text-white transition-all ease-in-out" : ""
               )}
             >
               <div className="flex w-full flex-col items-center justify-start p-5">
@@ -47,7 +46,11 @@ const Faq = () => {
                     aria-label="Open and close button"
                   >
                     <Chevron
-                      className={twJoin(clickId === item.id ? "rotate-180 text-white" : "")}
+                      className={twJoin(
+                        clickId === item.id
+                          ? "rotate-180 text-white transition-all ease-in-out"
+                          : ""
+                      )}
                     />
                   </button>
                 </div>
