@@ -11,15 +11,15 @@ const Footer = () => {
     <Layout className="md:px-5">
       <footer
         className={twJoin(
-          "flex w-full flex-col justify-between",
+          "flex w-full flex-col items-center justify-between",
           "bg-primary/5 py-10 px-5 md:flex-row md:px-10 lg:px-20"
         )}
       >
         <AnimationWrapper
           data-aos="fade-up"
-          className="flex flex-col items-start justify-center md:flex-row"
+          className="flex w-full flex-col items-start justify-around md:flex-row"
         >
-          <div className="flex flex-col items-start justify-start lg:w-[432px]">
+          <div className="flex flex-col items-start justify-start md:w-[360px] lg:w-[432px]">
             <div className="flex w-fit items-center">
               <Hand />
               <Subtitle className="ml-3">Chat N’ Rechat</Subtitle>
