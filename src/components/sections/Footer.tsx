@@ -1,8 +1,8 @@
+import { sitemapList, socialMediaList } from "@/lib/utils/data";
 import Layout from "@/ui/layout";
 import { Hand } from "@/ui/svg";
 import { Badge, SectionDescription, Subtitle } from "@/ui/typography";
 import AnimationWrapper from "@/ui/wrapper/AnimationWrapper";
-import { sitemapList, socialMediaList } from "@/lib/utils/data";
 import Link from "next/link";
 import { twJoin } from "tailwind-merge";
 
@@ -12,14 +12,14 @@ const Footer = () => {
       <footer
         className={twJoin(
           "flex w-full flex-col justify-between",
-          "bg-primary/5 py-10 px-5 md:flex-row md:px-20"
+          "bg-primary/5 py-10 px-5 md:flex-row md:px-10 lg:px-20"
         )}
       >
         <AnimationWrapper
           data-aos="fade-up"
           className="flex flex-col items-start justify-center md:flex-row"
         >
-          <div className="flex flex-col items-start justify-start md:w-[432px]">
+          <div className="flex flex-col items-start justify-start lg:w-[432px]">
             <div className="flex w-fit items-center">
               <Hand />
               <Subtitle className="ml-3">Chat N’ Rechat</Subtitle>
