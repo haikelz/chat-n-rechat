@@ -17,6 +17,9 @@ module.exports = {
         dark: "#0C1B4D",
         spacing: "#FFD39F",
       },
+      screens: {
+        phone: "411px",
+      },
     },
   },
   plugins: [],

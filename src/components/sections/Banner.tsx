@@ -6,7 +6,7 @@ import { Badge, SectionDescription, SectionTitle } from "@/ui/typography";
 import AnimationWrapper from "@/ui/wrapper/AnimationWrapper";
 import Image from "next/image";
 import Link from "next/link";
-import { twJoin, twMerge } from "tailwind-merge";
+import { twJoin } from "tailwind-merge";
 
 const Banner = () => {
   return (
@@ -29,8 +29,8 @@ const Banner = () => {
               <div>
                 <div className="flex">
                   <CustomButton
-                    className={twMerge(
-                      "mr-5 flex items-center justify-center bg-primary px-10 py-3 text-white",
+                    className={twJoin(
+                      "mr-5 flex items-center justify-center bg-primary py-3 px-6 text-white phone:px-10",
                       "hover:bg-blue-600"
                     )}
                     label="Register Button"
@@ -42,7 +42,7 @@ const Banner = () => {
                   <Link href="#features">
                     <CustomButton
                       className={twJoin(
-                        "flex items-center justify-center bg-primary/5 px-10 py-3",
+                        "flex items-center justify-center bg-primary/5 py-3 px-6 phone:px-10",
                         "hover:bg-primary/10"
                       )}
                       label="Learn More Button"
@@ -57,22 +57,22 @@ const Banner = () => {
               <div className="mt-[35px] flex w-full md:mt-[70px]">
                 <div className="mr-10 flex justify-center md:mr-20">
                   <Dontloud />
-                  <div className="ml-8 flex flex-col items-center justify-center">
+                  <div className="ml-4 flex flex-col justify-center phone:ml-8 phone:items-center">
                     <SectionDescription className="font-inter text-xs text-dark/60">
                       TOTAL DON’TLOUD
                     </SectionDescription>
-                    <SectionDescription className="font-inter text-2xl font-semibold text-dark">
+                    <SectionDescription className="font-inter text-xl font-semibold text-dark phone:text-2xl">
                       1,501,234
                     </SectionDescription>
                   </div>
                 </div>
                 <div className="flex justify-center">
                   <User />
-                  <div className="ml-8">
+                  <div className="ml-4 phone:ml-8">
                     <SectionDescription className="font-inter text-xs text-dark/60">
                       TOTAL USERS
                     </SectionDescription>
-                    <SectionDescription className="font-inter text-2xl font-semibold text-dark">
+                    <SectionDescription className="font-inter text-xl font-semibold text-dark phone:text-2xl">
                       1,318,829
                     </SectionDescription>
                   </div>
