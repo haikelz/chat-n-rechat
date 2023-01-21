@@ -1,6 +1,6 @@
+import { navbarList } from "@/lib/utils/data";
 import { CustomButton } from "@/ui/button";
 import { Bar, Hand, X } from "@/ui/svg";
-import { navbarList } from "@/lib/utils/data";
 import Link from "next/link";
 import { useState } from "react";
 import { twJoin } from "tailwind-merge";
@@ -64,13 +64,15 @@ const Navbar = () => {
             {navbarList.map((nav) => (
               <li key={nav.id} className="border-b-[1px] border-blue-700 py-2">
                 <Link
-                  className={twJoin(
-                    "px-0.5",
-                    nav.link === activeLink ? "bg-yellow-300 font-semibold" : "font-normal"
-                  )}
+                  className={twJoin(nav.link === activeLink ? "font-semibold" : "font-normal")}
                   href={nav.link}
                 >
-                  <button onClick={() => setActiveLink(nav.link)}>{nav.name}</button>
+                  <button
+                    className={twJoin("px-0.5", nav.link === activeLink ? "bg-yellow-300" : "")}
+                    onClick={() => setActiveLink(nav.link)}
+                  >
+                    {nav.name}
+                  </button>
                 </Link>
               </li>
             ))}

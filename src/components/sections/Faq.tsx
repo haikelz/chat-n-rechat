@@ -55,7 +55,7 @@ const Faq = () => {
                   </button>
                 </div>
                 {clickId === item.id ? (
-                  <SectionDescription className="text-white md:w-[612.97px]">
+                  <SectionDescription className="mt-3 text-white md:w-[612.97px]">
                     {item.answer}
                   </SectionDescription>
                 ) : null}
