@@ -1,5 +1,6 @@
-import { ChildrenProps } from "~types";
 import { twMerge } from "tailwind-merge";
+import { dmSans } from "~lib/utils/fonts";
+import { ChildrenProps } from "~types";
 
 type SubtitleProps = ChildrenProps & {
   className?: string;
@@ -7,7 +8,7 @@ type SubtitleProps = ChildrenProps & {
 
 export const Subtitle = ({ className, children }: SubtitleProps) => {
   return (
-    <p className={twMerge("font-dmsans text-[18px] font-medium leading-[26px]", className)}>
+    <p className={twMerge("text-[18px] font-medium leading-[26px]", dmSans.className, className)}>
       {children}
     </p>
   );

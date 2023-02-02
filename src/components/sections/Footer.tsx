@@ -1,5 +1,6 @@
-import { twJoin } from "tailwind-merge";
+import { twJoin, twMerge } from "tailwind-merge";
 import { sitemapList, socialMediaList } from "~lib/utils/data";
+import { sanspro } from "~lib/utils/fonts";
 import CustomLayout from "~ui/customLayout";
 import { Hand } from "~ui/svg";
 import { Badge, SectionDescription, Subtitle } from "~ui/typography";
@@ -36,7 +37,10 @@ const Footer = () => {
                 <li key={sitemap.id}>
                   <a
                     href={sitemap.link}
-                    className="font-sanspro text-[16px] font-semibold leading-[26px] text-dark/60"
+                    className={twMerge(
+                      "text-[16px] font-semibold leading-[26px] text-dark/60",
+                      sanspro.className
+                    )}
                   >
                     {sitemap.name}
                   </a>

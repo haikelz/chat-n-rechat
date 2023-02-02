@@ -1,4 +1,5 @@
 import { twMerge } from "tailwind-merge";
+import { sanspro } from "~lib/utils/fonts";
 import { ChildrenProps } from "~types";
 
 type CustomButtonProps = ChildrenProps & {
@@ -21,8 +22,9 @@ export const CustomButton = ({
       onClick={onClick}
       type="button"
       className={twMerge(
-        "rounded-md font-sanspro font-semibold transition-all ease-in-out",
+        "rounded-md font-semibold transition-all ease-in-out",
         isDropShadow ? "shadow-xl shadow-primary/25" : "",
+        sanspro.className,
         className
       )}
       aria-label={label}

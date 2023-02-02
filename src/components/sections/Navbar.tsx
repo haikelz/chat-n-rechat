@@ -18,8 +18,8 @@ const Navbar = () => {
       )}
     >
       <div className="mx-auto flex w-full max-w-5xl items-center justify-between px-5">
-        <button onClick={() => setActiveLink("/")}>
-          <a className="cursor-pointer" href="/">
+        <button type="button" onClick={() => setActiveLink("/")} aria-label="Home Button">
+          <a className="cursor-pointer" href="/" aria-label="Back to Home">
             <Hand />
           </a>
         </button>

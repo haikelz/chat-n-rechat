@@ -1,7 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import { twJoin } from "tailwind-merge";
+import { twJoin, twMerge } from "tailwind-merge";
 import { partnersList } from "~lib/utils/data";
+import { inter } from "~lib/utils/fonts";
 import { CustomButton } from "~ui/button";
 import CustomLayout from "~ui/customLayout";
 import { ArrowRight, Dontloud, User } from "~ui/svg";
@@ -30,7 +31,9 @@ const Banner = () => {
                 <div className="flex">
                   <CustomButton
                     className={twJoin(
-                      "mr-5 flex items-center justify-center bg-primary py-3 px-6 text-white phone:px-10",
+                      "mr-5 flex items-center justify-center",
+                      "bg-primary py-3 px-6 text-white",
+                      "phone:px-10",
                       "hover:bg-blue-600"
                     )}
                     label="Register Button"
@@ -42,7 +45,8 @@ const Banner = () => {
                   <Link href="#features">
                     <CustomButton
                       className={twJoin(
-                        "flex items-center justify-center bg-primary/5 py-3 px-6 phone:px-10",
+                        "flex items-center justify-center bg-primary/5 py-3 px-6",
+                        "phone:px-10",
                         "hover:bg-primary/10"
                       )}
                       label="Learn More Button"
@@ -57,24 +61,39 @@ const Banner = () => {
               <div className="mt-[35px] flex w-full md:mt-[70px]">
                 <div className="mr-10 flex justify-center md:mr-20">
                   <Dontloud />
-                  <div className="ml-4 flex flex-col justify-center phone:ml-8 phone:items-center">
-                    <SectionDescription className="font-inter text-xs text-dark/60">
+                  <div
+                    className={twJoin(
+                      "ml-4 flex flex-col justify-center",
+                      "phone:ml-8 phone:items-center"
+                    )}
+                  >
+                    <p className={twMerge("text-xs text-dark/60", inter.className)}>
                       TOTAL DON’TLOUD
-                    </SectionDescription>
-                    <SectionDescription className="font-inter text-xl font-semibold text-dark phone:text-2xl">
+                    </p>
+                    <p
+                      className={twMerge(
+                        "text-xl font-semibold text-dark",
+                        "phone:text-2xl",
+                        inter.className
+                      )}
+                    >
                       1,501,234
-                    </SectionDescription>
+                    </p>
                   </div>
                 </div>
                 <div className="flex justify-center">
                   <User />
                   <div className="ml-4 phone:ml-8">
-                    <SectionDescription className="font-inter text-xs text-dark/60">
-                      TOTAL USERS
-                    </SectionDescription>
-                    <SectionDescription className="font-inter text-xl font-semibold text-dark phone:text-2xl">
+                    <p className={twMerge("text-xs text-dark/60", inter.className)}>TOTAL USERS</p>
+                    <p
+                      className={twMerge(
+                        "text-xl font-semibold text-dark",
+                        "phone:text-2xl",
+                        inter.className
+                      )}
+                    >
                       1,318,829
-                    </SectionDescription>
+                    </p>
                   </div>
                 </div>
               </div>
@@ -98,7 +117,7 @@ const Banner = () => {
             "flex w-full flex-col items-center justify-center",
             "gap-8 bg-primary/5 p-10",
             "sm:grid sm:grid-cols-3 sm:grid-rows-1",
-            `md:grid-cols-5`
+            "md:grid-cols-5"
           )}
         >
           {partnersList.map((partner) => (
