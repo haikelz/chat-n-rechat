@@ -1,6 +1,6 @@
 import dynamic from "next/dynamic";
 import { featuresForNotRegisterList } from "~lib/utils/data";
-import Layout from "~ui/layout";
+import CustomLayout from "~ui/customLayout";
 import { Badge, SectionDescription, SectionTitle, Subtitle } from "~ui/typography";
 import AnimationWrapper from "~ui/wrapper/AnimationWrapper";
 
@@ -8,7 +8,7 @@ const LazyLoadImage = dynamic(() => import("~ui/images/LazyLoadImage"));
 
 const Technologies = () => {
   return (
-    <Layout id="technologies" className="border-t-[1.5px] py-[50px] px-5 md:py-[100px]">
+    <CustomLayout id="technologies" className="border-t-[1.5px] py-[50px] px-5 md:py-[100px]">
       <div className="flex flex-col items-center justify-center md:flex-row">
         <AnimationWrapper data-aos="fade-right">
           <LazyLoadImage
@@ -47,7 +47,7 @@ const Technologies = () => {
           </div>
         </AnimationWrapper>
       </div>
-    </Layout>
+    </CustomLayout>
   );
 };
 

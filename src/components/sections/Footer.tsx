@@ -1,14 +1,13 @@
-import Link from "next/link";
 import { twJoin } from "tailwind-merge";
 import { sitemapList, socialMediaList } from "~lib/utils/data";
-import Layout from "~ui/layout";
+import CustomLayout from "~ui/customLayout";
 import { Hand } from "~ui/svg";
 import { Badge, SectionDescription, Subtitle } from "~ui/typography";
 import AnimationWrapper from "~ui/wrapper/AnimationWrapper";
 
 const Footer = () => {
   return (
-    <Layout className="md:px-5">
+    <CustomLayout className="md:px-5">
       <footer
         className={twJoin(
           "flex w-full flex-col items-center justify-between",
@@ -35,12 +34,12 @@ const Footer = () => {
             <ul className="mt-5 space-y-3">
               {sitemapList.map((sitemap) => (
                 <li key={sitemap.id}>
-                  <Link
+                  <a
                     href={sitemap.link}
                     className="font-sanspro text-[16px] font-semibold leading-[26px] text-dark/60"
                   >
                     {sitemap.name}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>
@@ -69,7 +68,7 @@ const Footer = () => {
           </div>
         </AnimationWrapper>
       </footer>
-    </Layout>
+    </CustomLayout>
   );
 };
 

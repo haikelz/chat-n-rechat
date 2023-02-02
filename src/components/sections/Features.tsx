@@ -1,11 +1,11 @@
 import { featuresList } from "~lib/utils/data";
-import Layout from "~ui/layout";
+import CustomLayout from "~ui/customLayout";
 import { Badge, SectionDescription, SectionTitle, Subtitle } from "~ui/typography";
 import AnimationWrapper from "~ui/wrapper/AnimationWrapper";
 
 const Features = () => {
   return (
-    <Layout id="features" className="py-[50px] px-5 md:py-[100px]">
+    <CustomLayout id="features" className="py-[50px] px-5 md:py-[100px]">
       <div className="flex flex-col items-center justify-center">
         <AnimationWrapper
           data-aos="zoom-in"
@@ -43,7 +43,7 @@ const Features = () => {
           </div>
         </div>
       </div>
-    </Layout>
+    </CustomLayout>
   );
 };
 

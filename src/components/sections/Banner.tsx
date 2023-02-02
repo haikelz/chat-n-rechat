@@ -3,7 +3,7 @@ import Link from "next/link";
 import { twJoin } from "tailwind-merge";
 import { partnersList } from "~lib/utils/data";
 import { CustomButton } from "~ui/button";
-import Layout from "~ui/layout";
+import CustomLayout from "~ui/customLayout";
 import { ArrowRight, Dontloud, User } from "~ui/svg";
 import { Badge, SectionDescription, SectionTitle } from "~ui/typography";
 import AnimationWrapper from "~ui/wrapper/AnimationWrapper";
@@ -11,7 +11,7 @@ import AnimationWrapper from "~ui/wrapper/AnimationWrapper";
 const Banner = () => {
   return (
     <>
-      <Layout className="mt-[75px] px-5 md:mt-[100px]">
+      <CustomLayout className="mt-[75px] px-5 md:mt-[100px]">
         <div className="flex w-full flex-col items-center justify-center pb-[75px]">
           <div className="flex w-full flex-col items-center justify-between md:flex-row">
             <AnimationWrapper data-aos="fade-right" className="md:h-[475px] md:w-[497px]">
@@ -91,8 +91,8 @@ const Banner = () => {
             </AnimationWrapper>
           </div>
         </div>
-      </Layout>
-      <Layout className="md:px-5">
+      </CustomLayout>
+      <CustomLayout className="md:px-5">
         <div
           className={twJoin(
             "flex w-full flex-col items-center justify-center",
@@ -113,7 +113,7 @@ const Banner = () => {
             </AnimationWrapper>
           ))}
         </div>
-      </Layout>
+      </CustomLayout>
     </>
   );
 };

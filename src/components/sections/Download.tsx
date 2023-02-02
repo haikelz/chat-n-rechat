@@ -1,6 +1,6 @@
 import dynamic from "next/dynamic";
 import { twJoin } from "tailwind-merge";
-import Layout from "~ui/layout";
+import CustomLayout from "~ui/customLayout";
 import { Badge, SectionDescription, SectionTitle } from "~ui/typography";
 import AnimationWrapper from "~ui/wrapper/AnimationWrapper";
 
@@ -8,7 +8,7 @@ const LazyLoadImage = dynamic(() => import("~ui/images/LazyLoadImage"));
 
 const Download = () => {
   return (
-    <Layout id="download" className="px-5 py-[50px] md:py-[100px]">
+    <CustomLayout id="download" className="px-5 py-[50px] md:py-[100px]">
       <AnimationWrapper
         data-aos="flip-left"
         data-aos-duration="1500"
@@ -72,7 +72,7 @@ const Download = () => {
           </div>
         </div>
       </AnimationWrapper>
-    </Layout>
+    </CustomLayout>
   );
 };
 

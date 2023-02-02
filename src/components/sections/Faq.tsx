@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { twJoin, twMerge } from "tailwind-merge";
 import { questionsList } from "~lib/utils/data";
-import Layout from "~ui/layout";
+import CustomLayout from "~ui/customLayout";
 import { Chevron } from "~ui/svg";
 import { Badge, SectionDescription, SectionTitle, Subtitle } from "~ui/typography";
 import AnimationWrapper from "~ui/wrapper/AnimationWrapper";
@@ -17,7 +17,7 @@ const Faq = () => {
   };
 
   return (
-    <Layout id="faq" className="px-5 pt-[50px] pb-[100px] md:py-[100px]">
+    <CustomLayout id="faq" className="px-5 pt-[50px] pb-[100px] md:py-[100px]">
       <div className="flex flex-col items-center justify-center">
         <AnimationWrapper data-aos="zoom-in" className="flex flex-col items-center justify-center">
           <Badge color="dark">BANYAK YANG NANYA</Badge>
@@ -66,7 +66,7 @@ const Faq = () => {
           ))}
         </AnimationWrapper>
       </div>
-    </Layout>
+    </CustomLayout>
   );
 };
 

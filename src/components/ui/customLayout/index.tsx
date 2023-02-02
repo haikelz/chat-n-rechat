@@ -1,12 +1,12 @@
 import { ChildrenProps } from "~types";
 import { twMerge } from "tailwind-merge";
 
-type LayoutProps = ChildrenProps & {
+type CustomLayoutProps = ChildrenProps & {
   className?: string;
   id?: string;
 };
 
-const Layout = ({ className, id, children }: LayoutProps) => {
+const CustomLayout = ({ className, id, children }: CustomLayoutProps) => {
   return (
     <section
       id={id}
@@ -20,4 +20,4 @@ const Layout = ({ className, id, children }: LayoutProps) => {
   );
 };
 
-export default Layout;
+export default CustomLayout;
