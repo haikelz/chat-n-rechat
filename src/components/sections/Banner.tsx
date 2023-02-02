@@ -1,12 +1,12 @@
-import { partnersList } from "@/lib/utils/data";
-import { CustomButton } from "@/ui/button";
-import Layout from "@/ui/layout";
-import { ArrowRight, Dontloud, User } from "@/ui/svg";
-import { Badge, SectionDescription, SectionTitle } from "@/ui/typography";
-import AnimationWrapper from "@/ui/wrapper/AnimationWrapper";
 import Image from "next/image";
 import Link from "next/link";
 import { twJoin } from "tailwind-merge";
+import { partnersList } from "~lib/utils/data";
+import { CustomButton } from "~ui/button";
+import Layout from "~ui/layout";
+import { ArrowRight, Dontloud, User } from "~ui/svg";
+import { Badge, SectionDescription, SectionTitle } from "~ui/typography";
+import AnimationWrapper from "~ui/wrapper/AnimationWrapper";
 
 const Banner = () => {
   return (

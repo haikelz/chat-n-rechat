@@ -1,7 +1,7 @@
-import Layout from "@/ui/layout";
-import { Badge, SectionDescription, SectionTitle, Subtitle } from "@/ui/typography";
-import AnimationWrapper from "@/ui/wrapper/AnimationWrapper";
-import { featuresList } from "@/lib/utils/data";
+import { featuresList } from "~lib/utils/data";
+import Layout from "~ui/layout";
+import { Badge, SectionDescription, SectionTitle, Subtitle } from "~ui/typography";
+import AnimationWrapper from "~ui/wrapper/AnimationWrapper";
 
 const Features = () => {
   return (

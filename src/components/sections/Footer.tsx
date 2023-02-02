@@ -1,10 +1,10 @@
-import { sitemapList, socialMediaList } from "@/lib/utils/data";
-import Layout from "@/ui/layout";
-import { Hand } from "@/ui/svg";
-import { Badge, SectionDescription, Subtitle } from "@/ui/typography";
-import AnimationWrapper from "@/ui/wrapper/AnimationWrapper";
 import Link from "next/link";
 import { twJoin } from "tailwind-merge";
+import { sitemapList, socialMediaList } from "~lib/utils/data";
+import Layout from "~ui/layout";
+import { Hand } from "~ui/svg";
+import { Badge, SectionDescription, Subtitle } from "~ui/typography";
+import AnimationWrapper from "~ui/wrapper/AnimationWrapper";
 
 const Footer = () => {
   return (

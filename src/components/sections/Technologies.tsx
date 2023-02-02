@@ -1,10 +1,10 @@
-import Layout from "@/ui/layout";
-import { Badge, SectionDescription, SectionTitle, Subtitle } from "@/ui/typography";
-import AnimationWrapper from "@/ui/wrapper/AnimationWrapper";
-import { featuresForNotRegisterList } from "@/lib/utils/data";
 import dynamic from "next/dynamic";
+import { featuresForNotRegisterList } from "~lib/utils/data";
+import Layout from "~ui/layout";
+import { Badge, SectionDescription, SectionTitle, Subtitle } from "~ui/typography";
+import AnimationWrapper from "~ui/wrapper/AnimationWrapper";
 
-const LazyLoadImage = dynamic(() => import("@/ui/images/LazyLoadImage"));
+const LazyLoadImage = dynamic(() => import("~ui/images/LazyLoadImage"));
 
 const Technologies = () => {
   return (

@@ -1,5 +1,5 @@
-import { ChildrenProps } from "@/types";
 import { twMerge } from "tailwind-merge";
+import { ChildrenProps } from "~types";
 
 type CustomButtonProps = ChildrenProps & {
   className?: string;

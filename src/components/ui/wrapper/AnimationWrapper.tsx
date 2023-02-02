@@ -1,4 +1,4 @@
-import { ChildrenProps } from "@/types";
+import { ChildrenProps } from "~types";
 
 type AnimationWrapperProps = ChildrenProps & {
   className?: string;

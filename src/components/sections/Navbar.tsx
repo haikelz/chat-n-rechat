@@ -1,9 +1,10 @@
-import { navbarList } from "@/lib/utils/data";
-import { CustomButton } from "@/ui/button";
-import { Bar, Hand, X } from "@/ui/svg";
-import Link from "next/link";
+"use client";
+
 import { useState } from "react";
 import { twJoin } from "tailwind-merge";
+import { navbarList } from "~lib/utils/data";
+import { CustomButton } from "~ui/button";
+import { Bar, Hand, X } from "~ui/svg";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,14 +19,14 @@ const Navbar = () => {
     >
       <div className="mx-auto flex w-full max-w-5xl items-center justify-between px-5">
         <button onClick={() => setActiveLink("/")}>
-          <Link className="cursor-pointer" href="/">
+          <a className="cursor-pointer" href="/">
             <Hand />
-          </Link>
+          </a>
         </button>
         <ul className="hidden items-center justify-center space-x-16 text-dark md:flex">
           {navbarList.map((nav) => (
             <li key={nav.id}>
-              <Link
+              <a
                 className={twJoin(nav.link === activeLink ? "font-semibold" : "font-normal")}
                 href={nav.link}
               >
@@ -35,11 +36,11 @@ const Navbar = () => {
                 >
                   {nav.name}
                 </button>
-              </Link>
+              </a>
             </li>
           ))}
         </ul>
-        <Link href="#download">
+        <a href="#download">
           <CustomButton
             className="hidden bg-primary px-4 py-2 text-white hover:bg-blue-600 md:block"
             label="Download"
@@ -48,7 +49,7 @@ const Navbar = () => {
           >
             Download
           </CustomButton>
-        </Link>
+        </a>
         <button
           type="button"
           aria-label="Bar"
@@ -63,7 +64,7 @@ const Navbar = () => {
           <ul className="flex flex-col justify-center space-y-3">
             {navbarList.map((nav) => (
               <li key={nav.id} className="border-b-[1px] border-blue-700 py-2">
-                <Link
+                <a
                   className={twJoin(nav.link === activeLink ? "font-semibold" : "font-normal")}
                   href={nav.link}
                 >
@@ -73,11 +74,11 @@ const Navbar = () => {
                   >
                     {nav.name}
                   </button>
-                </Link>
+                </a>
               </li>
             ))}
             <li className="w-fit py-2">
-              <Link href="#download">
+              <a href="#download">
                 <CustomButton
                   className="bg-primary px-4 py-2 text-white hover:bg-blue-600"
                   label="Download"
@@ -86,7 +87,7 @@ const Navbar = () => {
                 >
                   Download
                 </CustomButton>
-              </Link>
+              </a>
             </li>
           </ul>
         </div>

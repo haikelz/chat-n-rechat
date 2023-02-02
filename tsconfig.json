@@ -20,28 +20,28 @@
     "incremental": true,
     "baseUrl": "./src",
     "paths": {
-      "@/public/*": [
+      "~public/*": [
         "public/*"
       ],
-      "@/sections/*": [
+      "~sections/*": [
         "components/sections/*"
       ],
-      "@/ui/*": [
+      "~ui/*": [
         "components/ui/*"
       ],
-      "@/helpers/*": [
+      "~helpers/*": [
         "helpers/*"
       ],
-      "@/hooks/*": [
+      "~hooks/*": [
         "hooks/*"
       ],
-      "@/styles/*": [
+      "~styles/*": [
         "styles/*"
       ],
-      "@/lib/*": [
+      "~lib/*": [
         "lib/*"
       ],
-      "@/types": [
+      "~types": [
         "types"
       ]
     },

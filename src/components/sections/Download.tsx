@@ -1,10 +1,10 @@
-import Layout from "@/ui/layout";
-import { Badge, SectionDescription, SectionTitle } from "@/ui/typography";
-import AnimationWrapper from "@/ui/wrapper/AnimationWrapper";
 import dynamic from "next/dynamic";
 import { twJoin } from "tailwind-merge";
+import Layout from "~ui/layout";
+import { Badge, SectionDescription, SectionTitle } from "~ui/typography";
+import AnimationWrapper from "~ui/wrapper/AnimationWrapper";
 
-const LazyLoadImage = dynamic(() => import("@/ui/images/LazyLoadImage"));
+const LazyLoadImage = dynamic(() => import("~ui/images/LazyLoadImage"));
 
 const Download = () => {
   return (

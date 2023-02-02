@@ -1,4 +1,4 @@
-import { ChildrenProps } from "@/types";
+import { ChildrenProps } from "~types";
 import { twMerge } from "tailwind-merge";
 
 type SectionDescriptionProps = ChildrenProps & {

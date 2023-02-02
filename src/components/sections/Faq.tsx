@@ -1,10 +1,12 @@
-import { questionsList } from "@/lib/utils/data";
-import Layout from "@/ui/layout";
-import { Chevron } from "@/ui/svg";
-import { Badge, SectionDescription, SectionTitle, Subtitle } from "@/ui/typography";
-import AnimationWrapper from "@/ui/wrapper/AnimationWrapper";
+"use client";
+
 import { useState } from "react";
 import { twJoin, twMerge } from "tailwind-merge";
+import { questionsList } from "~lib/utils/data";
+import Layout from "~ui/layout";
+import { Chevron } from "~ui/svg";
+import { Badge, SectionDescription, SectionTitle, Subtitle } from "~ui/typography";
+import AnimationWrapper from "~ui/wrapper/AnimationWrapper";
 
 const Faq = () => {
   const [clickId, setClickId] = useState(0);

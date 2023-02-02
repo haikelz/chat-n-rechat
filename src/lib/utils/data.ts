@@ -1,4 +1,13 @@
-import { Facebook, Groups, Instagram, Messages, SpeakFree, Twitter } from "@/ui/svg";
+import { Facebook, Groups, Instagram, Messages, SpeakFree, Twitter } from "~ui/svg";
+
+export const metadata = {
+  title: "Chat n' rechat",
+  type: "website",
+  url: "https://chat-n-rechat-seven.vercel.app/",
+  description:
+    "Sebuah aplikasi chatting yang bisa bikin kamu lupa diri, tapi tidak lupa jasa pahlawan!",
+  image: "/images/hand.png",
+};
 
 export const sitemapList = [
   {
