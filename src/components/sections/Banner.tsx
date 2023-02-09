@@ -1,10 +1,9 @@
-import Image from "next/image";
-import Link from "next/link";
 import { twJoin, twMerge } from "tailwind-merge";
 import { partnersList } from "~lib/utils/data";
 import { inter } from "~lib/utils/fonts";
 import { CustomButton } from "~ui/button";
 import CustomLayout from "~ui/customLayout";
+import PriorityImage from "~ui/images/PriorityImage";
 import { ArrowRight, Dontloud, User } from "~ui/svg";
 import { Badge, SectionDescription, SectionTitle } from "~ui/typography";
 import AnimationWrapper from "~ui/wrapper/AnimationWrapper";
@@ -12,7 +11,13 @@ import AnimationWrapper from "~ui/wrapper/AnimationWrapper";
 const Banner = () => {
   return (
     <>
-      <CustomLayout className="mt-[75px] px-5 md:mt-[100px]">
+      <CustomLayout
+        className={twJoin(
+          "md mt-[75px] px-5",
+          "max-[959px]:pb-[20px] max-[767px]:pb-0",
+          "md:mt-[100px]"
+        )}
+      >
         <div className="flex w-full flex-col items-center justify-center pb-[75px]">
           <div className="flex w-full flex-col items-center justify-between md:flex-row">
             <AnimationWrapper data-aos="fade-right" className="md:h-[475px] md:w-[497px]">
@@ -42,7 +47,7 @@ const Banner = () => {
                     <SectionDescription className="mr-2 text-white">Register</SectionDescription>
                     <ArrowRight />
                   </CustomButton>
-                  <Link href="#features">
+                  <a href="#features">
                     <CustomButton
                       className={twJoin(
                         "flex items-center justify-center bg-primary/5 py-3 px-6",
@@ -55,10 +60,10 @@ const Banner = () => {
                         Learn More
                       </SectionDescription>
                     </CustomButton>
-                  </Link>
+                  </a>
                 </div>
               </div>
-              <div className="mt-[35px] flex w-full md:mt-[70px]">
+              <div className="mt-[35px] flex w-full md:mt-[60px]">
                 <div className="mr-10 flex justify-center md:mr-20">
                   <Dontloud />
                   <div
@@ -99,14 +104,7 @@ const Banner = () => {
               </div>
             </AnimationWrapper>
             <AnimationWrapper className="mt-[75px] md:mt-0" data-aos="fade-left">
-              <Image
-                src="/images/hero.png"
-                className=""
-                width={483.82}
-                height={535.87}
-                alt="Hero"
-                priority={true}
-              />
+              <PriorityImage src="/images/hero.png" width={483.82} height={535.87} alt="Hero" />
             </AnimationWrapper>
           </div>
         </div>
@@ -122,12 +120,11 @@ const Banner = () => {
         >
           {partnersList.map((partner) => (
             <AnimationWrapper data-aos="fade-up" key={partner.id}>
-              <Image
+              <PriorityImage
                 src={partner.src}
                 alt={partner.alt}
                 width={partner.width}
                 height={partner.height}
-                priority={true}
               />
             </AnimationWrapper>
           ))}

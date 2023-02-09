@@ -1,5 +1,10 @@
 import { Facebook, Groups, Instagram, Messages, SpeakFree, Twitter } from "~ui/svg";
 
+const bangMessi =
+  "Keep in touch with the groups of people that matter the most, like your family or coworkers. With group chats, you can share messages, photos, and videos.";
+const gratisDong =
+  "Ya gratis dong, masa aplikasi chat aja berbayar sih. Lo kalo nanya yang bener dong. Bayangin aja kalo aplikasi ini berbayar, masa pas chat lo harus bayar setiap karakter. Kalo lo mau bayar mending pake MMS aja dah.";
+
 export const metadata = {
   title: "Chat n' rechat",
   type: "website",
@@ -115,40 +120,37 @@ export const questionsList = [
   {
     id: 1,
     question: "Apakah aplikasi ini sudah dapat izin dari MUI?",
-    answer: "Artinya apaan tu bang messi? Ente Frontend terbaik sedunia.",
+    answer: bangMessi,
   },
   {
     id: 2,
     question: "Apakah aplikasi ini gratis?",
-    answer:
-      "Ya gratis dong, masa aplikasi chat aja berbayar sih. Lo kalo nanya yang bener dong. Bayangin aja kalo aplikasi ini berbayar, masa pas chat lo harus bayar setiap karakter. Kalo lo mau bayar mending pake MMS aja dah.",
+    answer: gratisDong,
   },
   {
     id: 3,
     question: "Apakah data saya akan dijual ke agen khusus US?",
-    answer: "Artinya apaan tu bang messi? Ente Frontend terbaik sedunia.",
+    answer: bangMessi,
   },
   {
     id: 4,
     question: "Kenapa bumi muter? Apa karena di depan ada yang nikah?",
-    answer:
-      "Ya gratis dong, masa aplikasi chat aja berbayar sih. Lo kalo nanya yang bener dong. Bayangin aja kalo aplikasi ini berbayar, masa pas chat lo harus bayar setiap karakter. Kalo lo mau bayar mending pake MMS aja dah.",
+    answer: gratisDong,
   },
   {
     id: 5,
     question: "Gimana caranya supaya si Rizal mau bikin konten buat Array ID?",
-    answer: "Artinya apaan tu bang messi? Ente Frontend terbaik sedunia.",
+    answer: bangMessi,
   },
   {
     id: 6,
     question: "Pertanyaan di atas gabakal ada yang bisa jawab sih",
-    answer:
-      "Ya gratis dong, masa aplikasi chat aja berbayar sih. Lo kalo nanya yang bener dong. Bayangin aja kalo aplikasi ini berbayar, masa pas chat lo harus bayar setiap karakter. Kalo lo mau bayar mending pake MMS aja dah.",
+    answer: gratisDong,
   },
   {
     id: 7,
     question: "Kenapa game epep burik, bang?",
-    answer: "Artinya apaan tu bang messi? Ente Frontend terbaik sedunia.",
+    answer: bangMessi,
   },
 ];
 

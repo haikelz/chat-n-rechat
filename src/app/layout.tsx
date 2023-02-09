@@ -1,4 +1,5 @@
 import "aos/dist/aos.css";
+import { twJoin } from "tailwind-merge";
 import { metadata } from "~lib/utils/data";
 import "~styles/index.css";
 import { ChildrenProps } from "~types";
@@ -24,7 +25,12 @@ const RootLayout = ({ children }: ChildrenProps) => {
         <meta property="twitter:description" content={description} />
         <meta property="twitter:image" content={image} />
       </head>
-      <body className="bg-aliceblue scrollbar-thin scrollbar-track-gray-200 scrollbar-thumb-primary">
+      <body
+        className={twJoin(
+          "bg-aliceblue",
+          "scrollbar-thin scrollbar-track-gray-200 scrollbar-thumb-primary"
+        )}
+      >
         <div className="mx-auto flex w-full max-w-full flex-col items-center justify-center">
           {children}
         </div>

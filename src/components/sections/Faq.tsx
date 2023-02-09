@@ -1,21 +1,9 @@
-"use client";
-
-import { useState } from "react";
-import { twJoin, twMerge } from "tailwind-merge";
-import { questionsList } from "~lib/utils/data";
+import Accordion from "~ui/accordion";
 import CustomLayout from "~ui/customLayout";
-import { Chevron } from "~ui/svg";
-import { Badge, SectionDescription, SectionTitle, Subtitle } from "~ui/typography";
+import { Badge, SectionDescription, SectionTitle } from "~ui/typography";
 import AnimationWrapper from "~ui/wrapper/AnimationWrapper";
 
 const Faq = () => {
-  const [clickId, setClickId] = useState(0);
-
-  const handleClick = (id: number) => {
-    if (clickId === id) return setClickId(0);
-    setClickId(id);
-  };
-
   return (
     <CustomLayout id="faq" className="px-5 pt-[50px] pb-[100px] md:py-[100px]">
       <div className="flex flex-col items-center justify-center">
@@ -27,44 +15,7 @@ const Faq = () => {
             siapa tau lo mau baca ‘kan.
           </SectionDescription>
         </AnimationWrapper>
-        <AnimationWrapper
-          data-aos="fade-right"
-          className="mt-[50px] flex w-full flex-col md:mt-[100px]"
-        >
-          {questionsList.map((item) => (
-            <div
-              key={item.id}
-              className={twMerge(
-                "flex w-full flex-col items-center justify-center rounded-md border-b-2",
-                clickId === item.id ? "bg-primary text-white transition-all ease-in-out" : ""
-              )}
-            >
-              <div className="flex w-full flex-col items-center justify-start p-5">
-                <div className="flex w-full items-center justify-between">
-                  <Subtitle className="mr-5">{item.question}</Subtitle>
-                  <button
-                    onClick={() => handleClick(item.id)}
-                    type="button"
-                    aria-label="Open and close button"
-                  >
-                    <Chevron
-                      className={twJoin(
-                        clickId === item.id
-                          ? "rotate-180 text-white transition-all ease-in-out"
-                          : ""
-                      )}
-                    />
-                  </button>
-                </div>
-                {clickId === item.id ? (
-                  <SectionDescription className="mt-3 text-white md:w-[612.97px]">
-                    {item.answer}
-                  </SectionDescription>
-                ) : null}
-              </div>
-            </div>
-          ))}
-        </AnimationWrapper>
+        <Accordion />
       </div>
     </CustomLayout>
   );
