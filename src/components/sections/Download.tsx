@@ -12,16 +12,16 @@ const Download = () => {
       <AnimationWrapper
         data-aos="flip-left"
         data-aos-duration="1500"
-        className="w-full rounded-2xl bg-primary drop-shadow-primary"
+        className="w-full rounded-2xl bg-primary px-5 drop-shadow-primary md:px-0"
       >
         <div
           className={twJoin(
             "flex h-full flex-col overflow-hidden",
-            "md:flex-row md:px-[50px] md:pt-0 lg:px-[80px]"
+            "md:flex-row md:px-[40px] md:pt-0 lg:px-[80px]"
           )}
         >
           <div className="flex w-full flex-col items-center justify-between md:flex-row">
-            <div className="flex flex-col justify-center px-5 py-10 md:px-0 lg:py-0">
+            <div className="flex flex-col justify-center px-5 py-10 md:px-0">
               <Badge color="white">DOWNLOAD APLIKASINYA</Badge>
               <SectionTitle className="text-left text-white md:h-[126px] md:w-[418px]">
                 Download Aplikasi Chat n’ Rechat Di Play Store, App Store, atau Symbian Store
@@ -61,12 +61,11 @@ const Download = () => {
               </div>
             </div>
             <div className="hidden h-full w-fit md:block">
-              <LazyLoadImage
-                className="hidden h-full w-full md:block"
+              <img
+                className="hidden aspect-auto h-full w-full md:block"
                 src="/images/chat.png"
                 alt="Chat"
-                width={334}
-                height={538}
+                loading="lazy"
               />
             </div>
           </div>

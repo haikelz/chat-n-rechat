@@ -8,7 +8,7 @@ import { SectionDescription, Subtitle } from "~ui/typography";
 import AnimationWrapper from "~ui/wrapper/AnimationWrapper";
 
 const Accordion = () => {
-  const [clickId, setClickId] = useState(0);
+  const [clickId, setClickId] = useState<number>(0);
 
   const handleClick = (id: number) => {
     if (clickId === id) return setClickId(0);

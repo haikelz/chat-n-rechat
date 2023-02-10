@@ -1,9 +1,7 @@
 import { Facebook, Groups, Instagram, Messages, SpeakFree, Twitter } from "~ui/svg";
 
-const bangMessi =
-  "Keep in touch with the groups of people that matter the most, like your family or coworkers. With group chats, you can share messages, photos, and videos.";
-const gratisDong =
-  "Ya gratis dong, masa aplikasi chat aja berbayar sih. Lo kalo nanya yang bener dong. Bayangin aja kalo aplikasi ini berbayar, masa pas chat lo harus bayar setiap karakter. Kalo lo mau bayar mending pake MMS aja dah.";
+const bangMessi = "Artinya apaan tuh bang Messi? Ente kiper terbaik sedunia";
+const gratisDong = "Ya gratis dong, masa aplikasi chat aja berbayar sih. Lo kalo nanya yang bener dong. Bayangin aja kalo aplikasi ini berbayar, masa pas chat lo harus bayar setiap karakter. Kalo lo mau bayar mending pake MMS aja dah.";
 
 export const metadata = {
   title: "Chat n' rechat",
