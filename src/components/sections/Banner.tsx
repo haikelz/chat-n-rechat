@@ -113,8 +113,8 @@ const Banner = () => {
         <div
           className={twJoin(
             "flex w-full flex-col items-center justify-center",
-            "gap-8 bg-primary/5 p-10",
-            "sm:grid sm:grid-cols-3 sm:grid-rows-1",
+            "space-y-8 bg-primary/5 p-10",
+            "sm:grid sm:grid-cols-3 sm:grid-rows-1 sm:gap-8 sm:space-y-0",
             "md:grid-cols-5"
           )}
         >

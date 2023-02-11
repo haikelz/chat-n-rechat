@@ -28,7 +28,7 @@ const Accordion = () => {
             clickId === item.id ? "bg-primary text-white transition-all ease-in-out" : ""
           )}
         >
-          <div className="flex w-full flex-col items-center justify-start p-5">
+          <div className="flex w-full flex-col items-start justify-start p-5">
             <div className="flex w-full items-center justify-between">
               <Subtitle className="mr-5">{item.question}</Subtitle>
               <button
@@ -44,7 +44,7 @@ const Accordion = () => {
               </button>
             </div>
             {clickId === item.id ? (
-              <SectionDescription className="mt-3 text-white md:w-[612.97px]">
+              <SectionDescription className="mt-3 text-left text-white md:w-[612.97px]">
                 {item.answer}
               </SectionDescription>
             ) : null}
