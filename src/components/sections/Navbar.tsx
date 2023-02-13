@@ -7,8 +7,8 @@ import { CustomButton } from "~ui/button";
 import { Bar, Hand, X } from "~ui/svg";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeLink, setActiveLink] = useState("/");
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [activeLink, setActiveLink] = useState<string>("/");
 
   return (
     <nav

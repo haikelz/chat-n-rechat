@@ -10,7 +10,7 @@ const AnimationWrapper = ({ className, children, ...props }: AnimationWrapperPro
       data-aos-easing="ease-in-out"
       data-aos-mirror={true}
       data-aos-duration="500"
-      data-aos-once="false"
+      data-aos-once={true}
       className={className}
       {...props}
     >
